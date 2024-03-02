@@ -16,7 +16,7 @@ const BPACard = ({
   position?: string;
 }) => {
   return (
-    <div className="w-[18%] min-w-[180px] max-w-[200px] aspect-[3/4] h-auto text-center drop-shadow-xl border-4 rounded-xl flex flex-col bg-slate-50 border-slate-50 hover:scale-110 duration-150 ease-in hover:shadow-lg hover:font-semibold flex-grow-0">
+    <div className="w-[38%] sm:w-[18%] min-w-[116px] max-w-[200px] aspect-[3/4] h-auto text-center drop-shadow-xl border-4 rounded-xl flex flex-col bg-slate-50 border-slate-50 hover:scale-110 duration-150 ease-in hover:shadow-lg hover:font-semibold flex-grow-0">
       <Image
         src={
           imgUrl ||
