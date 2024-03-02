@@ -13,7 +13,10 @@ const fontFam = Poppins({
   subsets: ["latin"],
 });
 
-export default function App({ Component, pageProps: { session, ...pageProps } }: AppProps) {
+export default function App({
+  Component,
+  pageProps: { session, ...pageProps },
+}: AppProps) {
   const router = useRouter();
   const [scrolledOneThirdvw, setScrolledOneThirdvw] = useState(false);
   const [prevScrollPos, setPrevScrollPos] = useState(0);
@@ -62,8 +65,11 @@ export default function App({ Component, pageProps: { session, ...pageProps } }:
           router.pathname === "/" && !scrolledOneThirdvw
             ? "bg-gradient-to-t from-black to-[#242828] text-slate-100"
             : "bg-slate-100 text-slate-900"
-        }`}>
-        <main className={`flex min-h-screen flex-col items-center justify-between mx-auto overflow-x-clip ${fontFam.className}`}>
+        }`}
+      >
+        <main
+          className={`flex min-h-screen flex-col items-center justify-between mx-auto overflow-x-clip ${fontFam.className}`}
+        >
           <Component {...pageProps} />
         </main>
       </div>

@@ -8,7 +8,9 @@ import Link from "next/link";
 import { MdPerson } from "react-icons/md";
 
 const MenuList = ({ children }: { children: React.ReactNode }) => (
-  <li className="bg-slate-50 w-full hover:brightness-95 py-1 flex gap-3 items-center">{children}</li>
+  <li className="bg-slate-50 w-full hover:brightness-95 py-1 flex gap-3 items-center">
+    {children}
+  </li>
 );
 
 export default function LoginButton() {
@@ -20,7 +22,8 @@ export default function LoginButton() {
       <div className="relative w-fit h-fit text-slate-900">
         <button
           onClick={() => setShowDropDown(!showDropdown)}
-          className="flex gap-2 hover:brightness-95 duration-75 bg-slate-50/10 p-2 items-center w-12 h-12 justify-center border-2 rounded-full border-slate-500">
+          className="flex gap-2 hover:brightness-95 duration-75 bg-slate-50/10 p-2 items-center w-12 h-12 justify-center border-2 rounded-full border-slate-500"
+        >
           {session.user?.image ? (
             <Image
               src={session.user?.image}
@@ -30,18 +33,25 @@ export default function LoginButton() {
               className="object-contain"
             />
           ) : (
-            <MdPerson size={25} style={{ width: "100%", height: "100%" }} color="gray" />
+            <MdPerson
+              size={25}
+              style={{ width: "100%", height: "100%" }}
+              color="gray"
+            />
           )}
         </button>
 
         {/* Dropdown */}
         <div
           className={`absolute bg-slate-50 py-2 px-[0.6rem] border-2 rounded-md right-0 w-auto delay-75 transition-all ${
-            showDropdown ? "opacity-100 scale-100 top-[100%] right-0" : "opacity-0 scale-0 -top-[100%] -right-[200%]"
+            showDropdown
+              ? "opacity-100 scale-100 top-[100%] right-0"
+              : "opacity-0 scale-0 -top-[100%] -right-[200%]"
           }`}
           onMouseLeave={() => {
             setShowDropDown(false);
-          }}>
+          }}
+        >
           <div className="flex gap-4 border-b-2 pb-2">
             <div className="inline-block items-end w-fit">
               <p className="w-fit text-sm">{session?.user?.name}</p>
@@ -78,7 +88,10 @@ export default function LoginButton() {
           </ul>
 
           <div className="pt-2">
-            <button onClick={() => signOut()} className="hover:border-b-2 border-slate-600 ease-in duration-100 py-1 text-sm">
+            <button
+              onClick={() => signOut()}
+              className="hover:border-b-2 border-slate-600 ease-in duration-100 py-1 text-sm"
+            >
               Sign Out
             </button>
           </div>
@@ -88,7 +101,10 @@ export default function LoginButton() {
   }
   return (
     <>
-      <button onClick={() => signIn()} className="hover:brightness-95 border-2 bg-[#fafafa] px-2 py-1 rounded-md text-slate-900">
+      <button
+        onClick={() => signIn()}
+        className="hover:brightness-95 border-2 bg-[#fafafa] px-2 py-1 rounded-md text-slate-900"
+      >
         Sign in
       </button>
     </>
