@@ -2,11 +2,7 @@ name: Continuous Integration
 run-name: ${{ github.actor }} is triggering Continuous Integration
 
 on:
-  # Trigger the workflow on push or pull request,
-  push:
-    branches:
-      - main
-      - develop
+  # Trigger the workflow on pull request,
   pull_request: {}
 
 jobs:

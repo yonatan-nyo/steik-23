@@ -46,7 +46,7 @@ const BPAInfo = ({ data }: { data: bpaType }) => {
       {data.members.length > 1 ? (
         <>
           <p className="py-2 font-light">{data.jobDesc}</p>
-          <div className="flex gap-4 flex-wrap w-full">
+          <div className="flex gap-4 flex-wrap w-full justify-center sm:justify-start">
             {data.members.map((member, idx) => (
               <BPACard
                 key={`${idx}-${member}-${data.name}`}
