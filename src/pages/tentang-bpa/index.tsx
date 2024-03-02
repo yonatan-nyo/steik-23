@@ -23,7 +23,7 @@ const TentangBpa = () => {
       <section className="flex-grow flex flex-col md:flex-row items-center justify-center w-full overflow-x-clip relative h-fit">
         {/* nav */}
         <section className="h-full w-full flex flex-col items-start justify-start gap-2 px-4 self-stretch border-r-2 md:w-[210px]">
-          <div className="block md:fixed top-0 left-0 md:px-4 md:h-[100svh] md:shadow-lg">
+          <div className="block md:fixed top-0 left-0 md:px-4 md:h-[100svh] md:shadow-lg overflow-y-auto">
             <div className="w-fit h-[4.5rem] hidden md:flex items-center gap-2">
               <div
                 className={`h-4 min-h-full py-2 transition-all duration-300`}
